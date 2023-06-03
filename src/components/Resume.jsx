@@ -1,11 +1,7 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import NavBar from "./NavBar";
 import Profile from "./Profile";
-// import Education from "./Education";
-import Projects from "./Projects";
 import Experience from "./Experience";
-import Extras from "./Extras";
-import axios from "axios";
 import Education from "./Education";
 import OtherDetails from "./OtherDetails";
 
@@ -87,20 +83,6 @@ export class Resume extends Component {
 
 	handleChange = ({ target: { value, name } }) => {
 		this.setState({ [name]: value });
-	};
-
-	save = () => {
-		const data = {
-			user: this.props.user,
-			resume: this.state,
-		};
-		const promise = axios
-			.post("/save", data)
-			.then((res) => res)
-			.catch((err) => {
-				console.log(err);
-			});
-		return promise;
 	};
 
 	render() {

@@ -1,36 +1,26 @@
+import { NavigateBefore, NavigateNext } from "@mui/icons-material";
 import {
 	Card,
 	CardContent,
 	Divider,
 	Grid,
 	Paper,
-	Snackbar,
 	TextField,
 	Typography,
-	withStyles,
+	// withStyles,
 	CardHeader,
 	Button,
 	Container,
-} from "@material-ui/core";
-// import { BackHandSharp } from "@mui/icons-material";
-import React, { useState } from "react";
-import { Alert, Col, Row } from "react-bootstrap";
-import NavigateNextIcon from "@material-ui/icons/NavigateNext";
-import NavigateBeforeIcon from "@material-ui/icons/NavigateBefore";
-// import { CardHeader } from "reactstrap";
+	// styled,
+} from "@mui/material";
+// import { styled } from "@mui/styles";
+import { useState } from "react";
+import { Col, Row } from "react-bootstrap";
+import PropTypes from "prop-types";
 
-const styles = (theme) => ({
-	margin: {
-		margin: theme.spacing(1.3),
-	},
-	padding: {
-		padding: theme.spacing(1),
-	},
-});
-
-function Education({ classes, values, handleChange, nextStep, prevStep }) {
+function Education({ values, handleChange, nextStep, prevStep }) {
 	const [section, setSection] = useState(false);
-
+	// const classes = useStyles();
 	const addSectionHandler = () => {
 		setSection((prevCheck) => !prevCheck);
 	};
@@ -45,14 +35,14 @@ function Education({ classes, values, handleChange, nextStep, prevStep }) {
 	};
 
 	return (
-		<Paper className={classes.padding}>
+		<Paper style={{ padding: 8 }}>
 			<Card>
 				<CardHeader title='Education Details' />
 			</Card>
 			<CardContent>
-				<div className={classes.margin}>
+				<div className={{ margin: 14 }}>
 					<Paper elevation={3}>
-						<Typography align='left' variant='h6' className={classes.margin}>
+						<Typography align='left' variant='h6' style={{ margin: 14 }}>
 							Education 1
 						</Typography>
 						<Grid container spacing={2} alignItems='center' lg={12}>
@@ -128,7 +118,7 @@ function Education({ classes, values, handleChange, nextStep, prevStep }) {
 
 					{section && (
 						<Paper elevation={3}>
-							<Typography align='left' variant='h6' className={classes.margin}>
+							<Typography align='left' variant='h6' style={{ margin: 14 }}>
 								Education 2
 							</Typography>
 							<Grid container spacing={2} alignItems='center' lg={12}>
@@ -202,13 +192,13 @@ function Education({ classes, values, handleChange, nextStep, prevStep }) {
 					)}
 				</div>
 			</CardContent>
-			<Container className={classes.margin}>
+			<Container style={{ margin: 14 }}>
 				{/* {!section && ( */}
 				<Row>
 					<Col>
 						<Button
 							variant='contained'
-							style={{ marginBottom: "20px" }}
+							style={{ marginBottom: 20 }}
 							color='primary'
 							onClick={addSectionHandler}
 						>
@@ -218,14 +208,14 @@ function Education({ classes, values, handleChange, nextStep, prevStep }) {
 					</Col>
 				</Row>
 
-				<Row style={{ marginBottom: "20px" }}>
+				<Row style={{ marginBottom: 20 }}>
 					<Col xs={4} />
 					<Col xs={2}>
 						<Button
 							variant='contained'
 							color='secondary'
 							onClick={back}
-							startIcon={<NavigateBeforeIcon />}
+							startIcon={<NavigateBefore />}
 						>
 							Back
 						</Button>
@@ -235,7 +225,7 @@ function Education({ classes, values, handleChange, nextStep, prevStep }) {
 							variant='contained'
 							color='secondary'
 							onClick={next}
-							endIcon={<NavigateNextIcon />}
+							endIcon={<NavigateNext />}
 						>
 							Next
 						</Button>
@@ -262,9 +252,14 @@ function Education({ classes, values, handleChange, nextStep, prevStep }) {
 		</Paper>
 	);
 }
-
+Education.propTypes = {
+	values: PropTypes.objectOf(PropTypes.string),
+	handleChange: PropTypes.func,
+	nextStep: PropTypes.func,
+	prevStep: PropTypes.func,
+};
 // export default withStyles(styles)(Education);
 
-const StyledComponent = withStyles(styles)(Education);
+// const StyledComponent = withStyles(styles)(Education);
 
-export default StyledComponent;
+export default Education;

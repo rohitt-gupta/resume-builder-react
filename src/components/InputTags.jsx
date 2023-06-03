@@ -1,20 +1,22 @@
-import { Cancel, Tag } from "@mui/icons-material";
-import { FormControl, Stack, TextField, Typography } from "@mui/material";
+import { Cancel } from "@mui/icons-material";
+import { Stack, TextField, Typography } from "@mui/material";
+// import { Stack, TextField, Typography } from "@mui/material";
 import { Box } from "@mui/system";
+import PropTypes from "prop-types";
 import { useRef, useState } from "react";
 
 const Tags = ({ data, handleDelete }) => {
 	return (
 		<Box
 			sx={{
-				background: "#283240",
+				background: "#afb2b6",
 				height: "100%",
 				display: "flex",
 				padding: "0.4rem",
 				margin: "0 0.5rem 0 0",
 				justifyContent: "center",
 				alignContent: "center",
-				color: "#ffffff",
+				color: "#f1efef",
 			}}
 		>
 			<Stack direction='row' gap={1}>
@@ -28,6 +30,10 @@ const Tags = ({ data, handleDelete }) => {
 			</Stack>
 		</Box>
 	);
+};
+Tags.propTypes = {
+	data: PropTypes.objectOf(PropTypes.string),
+	handleDelete: PropTypes.func,
 };
 
 export default function InputTags() {
