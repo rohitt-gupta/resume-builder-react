@@ -1,11 +1,11 @@
 import { Component } from "react";
-import NavBar from "./NavBar";
-import Profile from "./Profile";
-import Experience from "./Experience";
-import Education from "./Education";
-import OtherDetails from "./OtherDetails";
+import NavBar from "../components/NavBar";
+import Profile from "../components/Profile";
+import Experience from "../components/Experience";
+import Education from "../components/Education";
+import OtherDetails from "../components/OtherDetails";
 
-export class Resume extends Component {
+export class CreateResume extends Component {
 	state = {
 		step: 1,
 		// Personal Profile Details...
@@ -281,7 +281,7 @@ export class Resume extends Component {
 	}
 }
 
-export default Resume;
+export default CreateResume;
 
 //  case 3:
 //  	return (
