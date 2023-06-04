@@ -10,19 +10,14 @@ import {
 	Button,
 	Container,
 } from "@mui/material";
-// import { BackHandSharp } from "@mui/icons-material";
-// import { useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import { CheckCircle, NavigateNext, NavigateBefore } from "@mui/icons-material";
-// import  from "@mui/material/icons";
 
-// import  from "@mui/material/icons/NavigateBefore";
 import InputTags from "./InputTags";
 import PropTypes from "prop-types";
+import "./OtherDetails.css";
 
 function OtherDetails({ handleChange, prevStep }) {
-	// const classes = useStyles();
-
 	const back = (e) => {
 		e.preventDefault();
 		prevStep();
@@ -55,9 +50,9 @@ function OtherDetails({ handleChange, prevStep }) {
 				</div>
 			</CardContent>
 			<Container style={{ margin: 14 }}>
-				<Row style={{ marginBottom: 20 }}>
-					<Col xs={4} />
-					<Col xs={2}>
+				<Row style={{ marginBottom: "20px" }}>
+					<Col xs={2} />
+					<Col xs={4}>
 						<Button
 							variant='contained'
 							color='secondary'
@@ -67,7 +62,7 @@ function OtherDetails({ handleChange, prevStep }) {
 							Back
 						</Button>
 					</Col>
-					<Col xs={2}>
+					<Col xs={4}>
 						<Button
 							variant='contained'
 							color='secondary'
@@ -78,10 +73,10 @@ function OtherDetails({ handleChange, prevStep }) {
 							Next
 						</Button>
 					</Col>
-					<Col xs={4} />
+					<Col xs={2} />
 				</Row>
+				<p className='text-center text-muted'>Page 4 </p>
 			</Container>
-			<p className='text-center text-muted'>Page 4 </p>
 		</Paper>
 	);
 }

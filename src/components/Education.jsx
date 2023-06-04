@@ -209,8 +209,8 @@ function Education({ values, handleChange, nextStep, prevStep }) {
 				</Row>
 
 				<Row style={{ marginBottom: 20 }}>
-					<Col xs={4} />
-					<Col xs={2}>
+					<Col xs={2} />
+					<Col xs={4}>
 						<Button
 							variant='contained'
 							color='secondary'
@@ -220,7 +220,7 @@ function Education({ values, handleChange, nextStep, prevStep }) {
 							Back
 						</Button>
 					</Col>
-					<Col xs={2}>
+					<Col xs={4}>
 						<Button
 							variant='contained'
 							color='secondary'
@@ -230,25 +230,10 @@ function Education({ values, handleChange, nextStep, prevStep }) {
 							Next
 						</Button>
 					</Col>
-					<Col xs={4} />
+					<Col xs={2} />
 				</Row>
+				<p className='text-center text-muted'>Page 2</p>
 			</Container>
-			<p className='text-center text-muted'>Page 2</p>
-
-			{/* <Snackbar
-				open={this.state.open}
-				autoHideDuration={6000}
-				onClose={this.handleClose}
-				action={this.action}
-			>
-				<Alert
-					onClose={this.handleClose}
-					severity='success'
-					sx={{ width: "100%" }}
-				>
-					Your data has been saved successfully !
-				</Alert>
-			</Snackbar> */}
 		</Paper>
 	);
 }
@@ -258,8 +243,5 @@ Education.propTypes = {
 	nextStep: PropTypes.func,
 	prevStep: PropTypes.func,
 };
-// export default withStyles(styles)(Education);
-
-// const StyledComponent = withStyles(styles)(Education);
 
 export default Education;

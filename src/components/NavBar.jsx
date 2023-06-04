@@ -7,7 +7,7 @@ const NavBar = () => {
 			style={{ backgroundColor: "#662E9B", flexGrow: 1 }}
 		>
 			<Toolbar>
-				<Typography variant='h6' style={{ flexGrow: 1 }}>
+				<Typography variant='h6' style={{ flexGrow: 1 }} className=''>
 					Resume Builder
 				</Typography>
 			</Toolbar>

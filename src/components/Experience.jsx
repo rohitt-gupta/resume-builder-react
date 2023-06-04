@@ -51,13 +51,10 @@ function Experience({ values, handleChange, nextStep, prevStep }) {
 			<CardContent>
 				<div style={{ margin: 14 }}>
 					<Paper elevation={3}>
-						{/* <Row> */}
 						<Typography align='left' variant='h6' style={{ margin: 14 }}>
 							<CheckCircle />
 							Organization 1
 						</Typography>
-						{/* </Row> */}
-
 						<Grid container spacing={2} alignItems='center' lg={12}>
 							<Grid item md={4} sm={12} xs={12} lg={4}>
 								<TextField
@@ -233,7 +230,6 @@ function Experience({ values, handleChange, nextStep, prevStep }) {
 				</div>
 			</CardContent>
 			<Container style={{ margin: 14 }}>
-				{/* {!section && ( */}
 				<Row>
 					<Col>
 						<Button
@@ -251,8 +247,8 @@ function Experience({ values, handleChange, nextStep, prevStep }) {
 				</Row>
 
 				<Row style={{ marginBottom: 20 }}>
-					<Col xs={4} />
-					<Col xs={2}>
+					<Col xs={2} />
+					<Col xs={4}>
 						<Button
 							variant='contained'
 							color='secondary'
@@ -262,7 +258,7 @@ function Experience({ values, handleChange, nextStep, prevStep }) {
 							Back
 						</Button>
 					</Col>
-					<Col xs={2}>
+					<Col xs={4}>
 						<Button
 							variant='contained'
 							color='secondary'
@@ -272,10 +268,10 @@ function Experience({ values, handleChange, nextStep, prevStep }) {
 							Next
 						</Button>
 					</Col>
-					<Col xs={4} />
+					<Col xs={2} />
 				</Row>
+				<p className='text-center text-muted'>Page 3</p>
 			</Container>
-			<p className='text-center text-muted'>Page 3</p>
 		</Paper>
 	);
 }
@@ -285,7 +281,5 @@ Experience.propTypes = {
 	nextStep: PropTypes.func,
 	prevStep: PropTypes.func,
 };
-
-// const StyledComponent = withStyles(styles)(Experience);
 
 export default Experience;

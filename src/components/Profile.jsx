@@ -31,12 +31,12 @@ const Profile = ({ values, handleChange, nextStep }) => {
 		nextStep();
 	};
 	return (
-		<Paper padding={8}>
+		<Paper className='p-2 w-auto'>
 			<Card>
 				<CardHeader title='Personal Details' />
 			</Card>
 			<CardContent>
-				<div style={{ margin: 14 }}>
+				<div className='m-3'>
 					<Grid container spacing={2} alignItems='center' lg={12}>
 						<Grid item md={6} sm={12} xs={12} lg={6}>
 							<TextField
@@ -159,8 +159,8 @@ const Profile = ({ values, handleChange, nextStep }) => {
 					</Grid>
 					<Container style={{ margin: 14 }}>
 						<Row>
-							<Col lg={3} xs={0} />
-							<Col lg={3} xs={5}>
+							<Col lg={2} xs={5} />
+							<Col lg={4} xs={5}>
 								<Button
 									variant='contained'
 									color='secondary'
@@ -171,7 +171,7 @@ const Profile = ({ values, handleChange, nextStep }) => {
 									Back
 								</Button>
 							</Col>
-							<Col lg={3} xs={5}>
+							<Col lg={4} xs={5}>
 								<Button
 									variant='contained'
 									color='secondary'
@@ -181,12 +181,12 @@ const Profile = ({ values, handleChange, nextStep }) => {
 									Next
 								</Button>
 							</Col>
-							<Col lg={3} xs={1} />
+							<Col lg={2} xs={5} />
 						</Row>
+						<p className='text-center text-muted'>Page 1</p>
 					</Container>
 				</div>
 			</CardContent>
-			<p className='text-center text-muted'>Page 1</p>
 		</Paper>
 	);
 };
