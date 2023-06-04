@@ -15,7 +15,7 @@ import { CheckCircle, NavigateNext, NavigateBefore } from "@mui/icons-material";
 
 import InputTags from "./InputTags";
 import PropTypes from "prop-types";
-import "./OtherDetails.css";
+// import "./OtherDetails.css";
 
 function OtherDetails({ handleChange, prevStep }) {
 	const back = (e) => {
