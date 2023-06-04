@@ -17,6 +17,7 @@ const Tags = ({ data, handleDelete }) => {
 				justifyContent: "center",
 				alignContent: "center",
 				color: "#f1efef",
+				borderRadius: "30%",
 			}}
 		>
 			<Stack direction='row' gap={1}>
@@ -39,7 +40,6 @@ Tags.propTypes = {
 export default function InputTags() {
 	const [tags, SetTags] = useState([]);
 	const tagRef = useRef();
-
 	const handleDelete = (value) => {
 		const newtags = tags.filter((val) => val !== value);
 		SetTags(newtags);
