@@ -1,12 +1,5 @@
-// /* eslint-disable no-unused-vars */
-// import React, { Suspense } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-// import NavBar from "../components/NavBar";
-// import NavBar from '../components/NavBar';
-// import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
-// import { Canvas } from "@react-three/fiber";
-// import Cube from "./Cube";
 
 const Section = styled.div`
 	height: 100vh;
