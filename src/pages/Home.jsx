@@ -127,7 +127,7 @@ const Home = () => {
 					<Button onClick={handleClick}>Build My Resume</Button>
 				</Left>
 				<Right>
-					<Img src='../../public/hero.jpg'></Img>
+					<Img src='https://res.cloudinary.com/ddkxvq59f/image/upload/v1685986387/hero_zytn1k.jpg'></Img>
 				</Right>
 			</Container>
 		</Section>
